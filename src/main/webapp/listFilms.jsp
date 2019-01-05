@@ -22,7 +22,7 @@
 	<form action="addActor" method="post">
 		<span>Tittle:</span><input type="text" name="tittle"> <span>Cod
 			Owner:</span><input type="text" name="codOwner"> <input
-			type="submit">
+			type="submit"> 
 		<!-- button type="button">My button</button>-->
 	</form>
 <!-- 
