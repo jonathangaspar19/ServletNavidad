@@ -13,6 +13,10 @@
 	<form action="loadActorList" method="post">
 		<input type="submit" value="Show Actors">
 	</form>
+	
+	<form action="loadFilmList" method="post">
+		<input type="submit" value="Show Films">
+	</form>
 	<!-- 
 	<div>
 		<a href="film/addFilm.jsp">Show Films</a>

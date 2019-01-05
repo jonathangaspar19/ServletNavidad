@@ -12,32 +12,32 @@ import javax.servlet.http.HttpServletResponse;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import es.salesianos.model.Actor;
-import es.salesianos.model.Director;
-import es.salesianos.repository.Repository;
-import es.salesianos.service.ActorService;
-import es.salesianos.service.DirectorService;
+import es.salesianos.model.Pelicula;
+import es.salesianos.repository.FilmRepository;
+import es.salesianos.service.PeliculaService;
 
-public class ListadoDirectorServlet extends HttpServlet {
-	private static final Logger log = LogManager.getLogger(ListadoDirectorServlet.class);
-	private DirectorService servicio = new DirectorService();
-	private Repository repository = new Repository();
+public class ListadoPeliculaServlet extends HttpServlet {
+	private static final Logger log = LogManager.getLogger(ListadoPeliculaServlet.class);
+	private PeliculaService servicio = new PeliculaService();
+	private FilmRepository repository = new FilmRepository();
 
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		List<Director> listAllDirectores = servicio.listAllDirectores();
-		req.setAttribute("listAllDirectores", listAllDirectores);
-		log.debug("This is a debug message");
-
+		List<Pelicula> listAllPeliculas = servicio.listAllPeliculas();
+		req.setAttribute("listAllPeliculas", listAllPeliculas);
+/*		
+ 		log.debug("This is a debug message");
 		log.info("This is an info message");
 		log.warn("This is a warn message");
 		log.error("This is an error message");
 		log.fatal("This is a fatal message");
+*/
+		
 		redirect(req, resp);
 	}
 
 	protected void redirect(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
-		RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/addDirector.jsp");
+		RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/listFilms.jsp");
 		dispatcher.forward(req, resp);
 	}
 }

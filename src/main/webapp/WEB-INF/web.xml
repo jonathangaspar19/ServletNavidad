@@ -88,6 +88,12 @@
 	</servlet>
 	
 	
+	<servlet>
+		<servlet-name>listadoPeliculaServlet</servlet-name>
+		<servlet-class>es.salesianos.servlet.ListadoPeliculaServlet</servlet-class>
+	</servlet>
+	
+	
 	<!-- Mapping -->
 	<servlet-mapping>
 		<servlet-name>addActorServlet</servlet-name>
@@ -97,6 +103,12 @@
 	<servlet-mapping>
 		<servlet-name>listadoActorServlet</servlet-name>
 		<url-pattern>loadActorList</url-pattern>
+	</servlet-mapping>
+	
+	
+	<servlet-mapping>
+		<servlet-name>listadoPeliculaServlet</servlet-name>
+		<url-pattern>loadFilmList</url-pattern>
 	</servlet-mapping>
 
 <!-- 

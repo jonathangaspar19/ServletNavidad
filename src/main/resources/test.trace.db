@@ -45,3 +45,31 @@ INSERT INTO ACTOR (name,surname)VALUES (?, ?) [42122-192]
 	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:672)
 	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:590)
 	at java.base/java.lang.Thread.run(Thread.java:834)
+2019-01-05 12:52:58 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Tabla "PELICULA" no encontrada
+Table "PELICULA" not found; SQL statement:
+SELECT * FROM PELICULA WHERE codOwner=? [42102-192]
+2019-01-05 13:02:24 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Tabla "PELICULA" no encontrada
+Table "PELICULA" not found; SQL statement:
+SELECT * FROM PELICULA WHERE codOwner=? [42102-192]
+2019-01-05 13:02:27 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLException: Tabla "PELICULA" no encontrada
+Table "PELICULA" not found; SQL statement:
+SELECT * FROM PELICULA WHERE codOwner=? [42102-192]
+2019-01-05 13:09:22 jdbc[6]: exception
+org.h2.jdbc.JdbcSQLException: Tabla "PELICULA" no encontrada
+Table "PELICULA" not found; SQL statement:
+SELECT * FROM PELICULA WHERE codOwner=? [42102-192]
+2019-01-05 13:09:28 jdbc[7]: exception
+org.h2.jdbc.JdbcSQLException: Tabla "PELICULA" no encontrada
+Table "PELICULA" not found; SQL statement:
+SELECT * FROM PELICULA WHERE codOwner=? [42102-192]
+2019-01-05 13:16:06 jdbc[9]: exception
+org.h2.jdbc.JdbcSQLException: Tabla "PELICULA" no encontrada
+Table "PELICULA" not found; SQL statement:
+SELECT * FROM PELICULA WHERE codOwner=? [42102-192]
+2019-01-05 13:27:57 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Tabla "PELICULA" no encontrada
+Table "PELICULA" not found; SQL statement:
+SELECT * FROM PELICULA [42102-192]

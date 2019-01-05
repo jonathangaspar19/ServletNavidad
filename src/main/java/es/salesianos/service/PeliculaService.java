@@ -14,6 +14,7 @@ import es.salesianos.connection.ConnectionManager;
 import es.salesianos.model.Actor;
 import es.salesianos.model.Pelicula;
 import es.salesianos.model.assembler.ActorAssembler;
+import es.salesianos.repository.FilmRepository;
 //import es.salesianos.model.assembler.PeliculaAssembler;
 import es.salesianos.repository.Repository;
 import es.salesianos.utils.DateConverter;
@@ -21,7 +22,7 @@ import es.salesianos.utils.DateConverter;
 public class PeliculaService {
 	
 	
-	private Repository repository = new Repository();
+	private FilmRepository repository = new FilmRepository();
 	private DateConverter converter = new DateConverter();
 	private static final Logger LOGGER = LogManager.getLogger(PeliculaService.class);
 	
@@ -45,20 +46,12 @@ public class PeliculaService {
 		}
 	}
 	
-	public void deleteOwner(Integer codOwner) {
-		repository.delete(codOwner);
-	}
 	
-	public Actor search(Integer codOwner) {
-		return repository.searchByCodOwner(codOwner);
-		
-	}
-
-	public Repository getRepository() {
+	public FilmRepository getRepository() {
 		return repository;
 	}
 
-	public void setRepository(Repository repository) {
+	public void setRepository(FilmRepository filmRepository) {
 		this.repository = repository;
 	}
 	

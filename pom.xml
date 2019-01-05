@@ -4,9 +4,9 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>es.salesianos</groupId>
-	<artifactId>Recuperacion</artifactId>
+	<artifactId>RecuperacionNavidadesServlet</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>Recuperacion</name>
+	<name>RecuperacionNavidadesServlet</name>
 	<packaging>war</packaging>
 
 	<dependencies>
