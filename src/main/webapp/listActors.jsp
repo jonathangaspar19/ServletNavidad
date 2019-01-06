@@ -16,6 +16,11 @@
 <%
 	List<Actor> actors = (List<Actor>) request.getAttribute("listAllActors");
 	pageContext.setAttribute("actors", actors);
+	if (actors!=null) {
+		System.out.println("actors.size " + actors.size());	
+	} else {
+		System.out.println("actors " + actors);	
+	}
 %>
 
 <body>
@@ -35,7 +40,7 @@
 			</tr>
 		</thead>
 		<tbody>
-			<c:forEach var="actor" items="${listAllActors}">
+			<c:forEach var="actor" items="${actors}">
 				<tr>
 					<td><c:out value="${actor.cod}" /></td>
 					<td><c:out value="${actor.name}" /></td>

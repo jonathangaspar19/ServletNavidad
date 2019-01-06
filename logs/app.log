@@ -288,3 +288,55 @@
 [INFO ] 2019-01-05 13:16:06.116 [qtp1900971551-21] PeliculaService - listAllPeliculas
 [INFO ] 2019-01-05 13:22:08.228 [qtp37427881-15] ActorService - listAllActores method...
 [INFO ] 2019-01-05 13:27:57.387 [qtp37427881-33] PeliculaService - listAllPeliculas
+[INFO ] 2019-01-05 18:48:35.748 [qtp1703040426-15] PeliculaService - listAllPeliculas
+[INFO ] 2019-01-05 18:53:57.616 [qtp1703040426-17] PeliculaService - listAllPeliculas
+[INFO ] 2019-01-05 18:54:28.841 [qtp1703040426-21] PeliculaService - listAllPeliculas
+[INFO ] 2019-01-05 18:54:41.039 [qtp1703040426-21] PeliculaService - listAllPeliculas
+[INFO ] 2019-01-05 18:54:53.812 [qtp1703040426-18] ActorService - listAllActores method...
+[INFO ] 2019-01-05 20:11:06.350 [qtp509104428-21] PeliculaService - listAllPeliculas
+[INFO ] 2019-01-05 21:43:47.068 [qtp509104428-16] PeliculaService - listAllPeliculas
+[INFO ] 2019-01-06 16:57:28.865 [qtp509104428-16] PeliculaService - listAllPeliculas
+[INFO ] 2019-01-06 16:58:31.354 [qtp509104428-21] ActorService - listAllActores method...
+[INFO ] 2019-01-06 16:58:36.695 [qtp509104428-14] PeliculaService - listAllPeliculas
+[INFO ] 2019-01-06 16:59:00.567 [qtp509104428-17] PeliculaService - listAllPeliculas
+[INFO ] 2019-01-06 16:59:12.326 [qtp509104428-16] PeliculaService - listAllPeliculas
+[INFO ] 2019-01-06 17:02:03.027 [qtp509104428-16] ActorService - listAllActores method...
+[INFO ] 2019-01-06 17:12:34.490 [qtp509104428-16] PeliculaService - listAllPeliculas
+[INFO ] 2019-01-06 17:19:40.930 [qtp1342373353-16] PeliculaService - listAllPeliculas
+[INFO ] 2019-01-06 17:20:43.655 [qtp1991010480-17] PeliculaService - listAllPeliculas
+[INFO ] 2019-01-06 17:25:29.913 [qtp1991010480-19] PeliculaService - listAllPeliculas
+[INFO ] 2019-01-06 18:04:04.890 [qtp992054388-21] PeliculaService - listAllPeliculas
+[INFO ] 2019-01-06 19:09:13.180 [qtp1703040426-16] DirectorService - ESTAS EN EL ListService
+[INFO ] 2019-01-06 19:11:01.628 [qtp277549599-18] DirectorService - ESTAS EN EL ListService
+[INFO ] 2019-01-06 19:12:24.416 [qtp1359212194-17] DirectorService - ESTAS EN EL ListService
+[INFO ] 2019-01-06 19:13:00.710 [qtp1359212194-16] DirectorService - ESTAS EN EL ListService
+[INFO ] 2019-01-06 19:13:13.105 [qtp1359212194-18] ActorService - listAllActores method...
+[INFO ] 2019-01-06 19:13:18.728 [qtp1359212194-17] DirectorService - ESTAS EN EL ListService
+[INFO ] 2019-01-06 19:18:09.281 [qtp2016512706-17] ActorService - listAllActores method...
+[INFO ] 2019-01-06 19:19:41.391 [qtp2016512706-18] DirectorService - ESTAS EN EL ListService
+[INFO ] 2019-01-06 19:20:24.130 [qtp2016512706-16] DirectorService - ESTAS EN EL ListService
+[INFO ] 2019-01-06 19:24:08.944 [qtp2016512706-17] DirectorService - ESTAS EN EL ListService
+[INFO ] 2019-01-06 19:27:03.617 [qtp2016512706-16] DirectorService - ESTAS EN EL ListService
+[INFO ] 2019-01-06 19:27:29.606 [qtp2016512706-20] DirectorService - ESTAS EN EL ListService
+[INFO ] 2019-01-06 19:28:38.405 [qtp2016512706-17] ActorService - listAllActores method...
+[INFO ] 2019-01-06 19:29:17.912 [qtp2016512706-15] ActorService - listAllActores method...
+[INFO ] 2019-01-06 19:30:08.893 [qtp1703040426-21] ActorService - listAllActores method...
+[INFO ] 2019-01-06 19:30:21.922 [qtp1703040426-18] ActorService - listAllActores method...
+[INFO ] 2019-01-06 19:32:51.113 [qtp1703040426-17] ActorService - listAllActores method...
+[INFO ] 2019-01-06 19:33:09.961 [qtp1703040426-18] ActorService - listAllActores method...
+[INFO ] 2019-01-06 19:33:18.078 [qtp1703040426-17] ActorService - listAllActores method...
+[INFO ] 2019-01-06 19:34:16.421 [qtp1703040426-18] ActorService - listAllActores method...
+[INFO ] 2019-01-06 19:36:57.784 [qtp1982072255-17] DirectorService - ESTAS EN EL ListService
+[INFO ] 2019-01-06 19:37:39.486 [qtp1982072255-17] DirectorService - ESTAS EN EL ListService
+[INFO ] 2019-01-06 19:43:58.102 [qtp1982072255-17] ActorService - listAllActores method...
+[INFO ] 2019-01-06 19:44:12.264 [qtp1982072255-21] PeliculaService - listAllPeliculas
+[INFO ] 2019-01-06 19:49:45.779 [qtp1798239502-18] PeliculaService - listAllPeliculas
+[INFO ] 2019-01-06 19:51:21.044 [qtp1703040426-17] PeliculaService - listAllPeliculas
+[INFO ] 2019-01-06 19:52:23.237 [qtp1703040426-16] PeliculaService - listAllPeliculas
+[INFO ] 2019-01-06 19:53:00.110 [qtp1249070084-18] PeliculaService - listAllPeliculas
+[INFO ] 2019-01-06 19:54:03.102 [qtp1703040426-17] PeliculaService - listAllPeliculas
+[INFO ] 2019-01-06 19:55:56.316 [qtp1703040426-19] PeliculaService - listAllPeliculas
+[INFO ] 2019-01-06 19:56:18.293 [qtp1703040426-17] PeliculaService - listAllPeliculas
+[INFO ] 2019-01-06 19:58:08.852 [qtp1703040426-16] PeliculaService - listAllPeliculas
+[INFO ] 2019-01-06 19:59:29.846 [qtp1703040426-18] PeliculaService - listAllPeliculas
+[INFO ] 2019-01-06 20:02:09.260 [qtp1703040426-19] PeliculaService - listAllPeliculas

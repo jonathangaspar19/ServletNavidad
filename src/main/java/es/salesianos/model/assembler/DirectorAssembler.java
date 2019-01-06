@@ -15,7 +15,6 @@ public class DirectorAssembler {
 			director.setCod(Integer.parseInt(cod));
 		}
 		String name = req.getParameter("name");
-		Integer year = Integer.parseInt(req.getParameter("yearofbirthdate"));
 		director.setName(name);
 		return director;
 	}

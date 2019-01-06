@@ -14,6 +14,12 @@
 		<input type="submit" value="Show Actors">
 	</form>
 	
+	<form action="loadDirectorsList" method="post">
+		<input type="submit" value="Show Directors">
+	</form>	
+	
+	<!-- <div><a href="listFilms.jsp">Show Films</a></div>-->
+	
 	<form action="loadFilmList" method="post">
 		<input type="submit" value="Show Films">
 	</form>

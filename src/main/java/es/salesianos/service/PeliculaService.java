@@ -15,7 +15,7 @@ import es.salesianos.model.Actor;
 import es.salesianos.model.Pelicula;
 import es.salesianos.model.assembler.ActorAssembler;
 import es.salesianos.repository.FilmRepository;
-//import es.salesianos.model.assembler.PeliculaAssembler;
+import es.salesianos.model.assembler.PeliculaAssambler;
 import es.salesianos.repository.Repository;
 import es.salesianos.utils.DateConverter;
 
@@ -28,8 +28,7 @@ public class PeliculaService {
 	
 	
 	public Pelicula assembleOwnerFromRequest(HttpServletRequest req) {
-		//return PeliculaAssembler.assemblePeliculaFrom(req);
-		return null;
+		return PeliculaAssambler.assemblePeliculaFrom(req);
 	}
 	
 	//pasar los datos

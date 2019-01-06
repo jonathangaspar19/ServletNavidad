@@ -33,4 +33,8 @@ public class Pelicula {
 		this.codDirector = codDirector;
 	}
 
+	@Override
+	public String toString() {
+		return "Pelicula [cod=" + cod + ", titulo=" + titulo + ", codDirector=" + codDirector+"]";
+	}
 }

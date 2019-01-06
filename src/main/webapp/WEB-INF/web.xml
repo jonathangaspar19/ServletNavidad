@@ -87,14 +87,28 @@
 		<servlet-class>es.salesianos.servlet.ListadoActorServlet</servlet-class>
 	</servlet>
 	
+	<servlet>
+		<servlet-name>addPeliculaServlet</servlet-name>
+		<servlet-class>es.salesianos.servlet.AddPeliculaServlet</servlet-class>
+	</servlet>
 	
 	<servlet>
 		<servlet-name>listadoPeliculaServlet</servlet-name>
 		<servlet-class>es.salesianos.servlet.ListadoPeliculaServlet</servlet-class>
 	</servlet>
 	
+	<servlet>
+		<servlet-name>listadoDirectorsServlet</servlet-name>
+		<servlet-class>es.salesianos.servlet.ListadoDirectorServlet</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>addDirectorServlet</servlet-name>
+		<servlet-class>es.salesianos.servlet.AddDirectorServlet</servlet-class>
+	</servlet>
 	
 	<!-- Mapping -->
+	
 	<servlet-mapping>
 		<servlet-name>addActorServlet</servlet-name>
 		<url-pattern>/addActor</url-pattern>
@@ -105,12 +119,26 @@
 		<url-pattern>loadActorList</url-pattern>
 	</servlet-mapping>
 	
-	
+	<servlet-mapping>
+		<servlet-name>addPeliculaServlet</servlet-name>
+		<url-pattern>/addFilm</url-pattern>
+	</servlet-mapping>
+
 	<servlet-mapping>
 		<servlet-name>listadoPeliculaServlet</servlet-name>
 		<url-pattern>loadFilmList</url-pattern>
 	</servlet-mapping>
-
+	
+	<servlet-mapping>
+		<servlet-name>listadoDirectorsServlet</servlet-name>
+		<url-pattern>loadDirectorsList</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>addDirectorServlet</servlet-name>
+		<url-pattern>/addDirector</url-pattern>
+	</servlet-mapping>
+	
 <!-- 
 	<servlet-mapping>
 		<servlet-name>addActorServlet</servlet-name>

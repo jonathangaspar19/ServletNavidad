@@ -14,41 +14,44 @@
 </head>
 
 <%-- <%
-	List<Pelicula> actors = (List<Pelicula>) request.getAttribute("listAllPeliculas");
+	List<Pelicula> listFilm = (List<Pelicula>) request.getAttribute("listAllPeliculas");
 	pageContext.setAttribute("films", listFilm);
-%>
- --%>
+	if (listFilm!=null) {
+		System.out.println("listFilm.size in the jsp: " + listFilm.size());	
+	} else {
+		System.out.println("listFilm in the jsp: " + listFilm);	
+	}
+		
+%> --%>
+
 <body>
-	<form action="addActor" method="post">
-		<span>Tittle:</span><input type="text" name="tittle"> <span>Cod
-			Owner:</span><input type="text" name="codOwner"> <input
-			type="submit"> 
-		<!-- button type="button">My button</button>-->
+	<form action="addFilm" method="post">
+		<span>Tittle:</span><input type="text" name="tittle"> 
+		<span>CodOwner:</span><input type="text" name="codOwner"> 
+		<input type="submit">
 	</form>
-<!-- 
+
 	<table border="1">
 		<thead>
 			<tr>
-				<td>Cod Film</td>
 				<td>Tittle</td>
 				<td>Cod Owner</td>
 			</tr>
 		</thead>
 		<tbody>
-			<c:forEach var="film" items="${listAllActors}">
+			<c:forEach var="film" items="${listAllPeliculas}">
 				<tr>
-					<td><c:out value="${actor.cod}" /></td>
-					<td><c:out value="${actor.name}" /></td>
-					<td><c:out value="${actor.yearOfTheBirthDate}" /></td>
+					<td><c:out value="${film.titulo}" /></td>
+					<td><c:out value="${film.codDirector}" /></td>
 					<%-- <td><a href="/editOwner?codOwner=${owner1.codOwner}">EDIT</a>
-					</td> --%>
+					</td> 
 					<td><a href="/confirmDeleteOwner?cod=${actor.cod}">DELETE</a>
 					</td>
+					--%>
 				</tr>
 			</c:forEach>
 		</tbody>
 	</table>
-	
-	 -->
+
 </body>
 </html>

@@ -16,7 +16,40 @@ import es.salesianos.model.Pelicula;
 public class FilmRepository {
 
 	private static final String jdbcUrl = "jdbc:h2:file:./src/main/resources/test";
+
 	ConnectionManager manager = new ConnectionH2();
+	
+	/*
+	public List<Actor> searchAllActores() {
+		List<Actor> listActores = new ArrayList<Actor>();
+		Connection conn = manager.open(jdbcUrl);
+		ResultSet resultSet = null;
+		PreparedStatement prepareStatement = null;
+		try {
+			prepareStatement = conn.prepareStatement("SELECT * FROM ACTOR");
+			resultSet = prepareStatement.executeQuery();
+			System.out.println("Entrando en el while de searchAllActores");
+			Actor actorInDatabase;
+			while (resultSet.next()) {
+				actorInDatabase = new Actor();
+				actorInDatabase.setCod(resultSet.getInt(1));
+				actorInDatabase.setName(resultSet.getString(2));
+				actorInDatabase.setYearOfTheBirthDate(resultSet.getInt(3));
+				System.out.println("Actor in Database " + actorInDatabase.toString() );
+				listActores.add(actorInDatabase);
+			}
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+			throw new RuntimeException(e);
+		} finally {
+			close(resultSet);
+			close(prepareStatement);
+			manager.close(conn);
+		}
+		System.out.println("listActores.size(): " + listActores.size());
+		return listActores;
+	}	
 	
 	public void insertActor(Actor actor) {
 		Connection conn = manager.open(jdbcUrl);
@@ -36,8 +69,53 @@ public class FilmRepository {
 			close(preparedStatement);
 			manager.close(conn);
 		}
+	}	*/
+
+	public List<Pelicula> searchAllPeliculas() {
+		List<Pelicula> listFilm = new ArrayList<Pelicula>();
+		Connection conn = manager.open(jdbcUrl);
+		ResultSet resultSet = null;
+		PreparedStatement prepareStatement = null;
+		try {
+			prepareStatement = conn.prepareStatement("SELECT cod, codOwner, tittle FROM FILM");
+			resultSet = prepareStatement.executeQuery();
+			Pelicula filmInDataBase;
+			while (resultSet.next()) {
+				filmInDataBase = new Pelicula();
+				filmInDataBase.setCod(resultSet.getInt(1));
+				filmInDataBase.setCodDirector(resultSet.getInt(2));
+				filmInDataBase.setTitulo(resultSet.getString(3));				
+				listFilm.add(filmInDataBase);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+			throw new RuntimeException(e);
+		} finally {
+			close(resultSet);
+			close(prepareStatement);
+			manager.close(conn);
+		}
+		System.out.println("listFilm.size(): " + listFilm.size());
+		return listFilm;
 	}	
 	
+	public void insertPelicula(Pelicula pelicula) {
+		Connection conn = manager.open(jdbcUrl);
+		PreparedStatement preparedStatement = null;
+		System.out.println("Pelicula object in insertPelicula: " + pelicula.toString());
+		try {
+			preparedStatement = conn.prepareStatement("INSERT INTO FILM (TITTLE ,codOwner)" + "VALUES (?, ?)");
+			preparedStatement.setString(1, pelicula.getTitulo());
+			preparedStatement.setInt(2, pelicula.getCodDirector());
+			preparedStatement.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+			throw new RuntimeException(e);
+		} finally {
+			close(preparedStatement);
+			manager.close(conn);
+		}
+	}	
 	
 	public Actor search(Actor actorFormulario) {
 		Actor actorInDatabase = null;
@@ -117,23 +195,6 @@ public class FilmRepository {
 			preparedStatement = conn.prepareStatement("INSERT INTO DIRECTOR (name,surname)" + "VALUES (?, ?)");
 			preparedStatement.setString(1, directorFormulario.getName());
 //			preparedStatement.setString(2, directorFormulario.getSurname());
-			preparedStatement.executeUpdate();
-		} catch (SQLException e) {
-			e.printStackTrace();
-			throw new RuntimeException(e);
-		} finally {
-			close(preparedStatement);
-		}
-
-		manager.close(conn);
-	}
-
-	public void insertPelicula(Pelicula peliculaFormulario) {
-		Connection conn = manager.open(jdbcUrl);
-		PreparedStatement preparedStatement = null;
-		try {
-			preparedStatement = conn.prepareStatement("INSERT INTO ACTOR (name,surname)" + "VALUES (?, ?)");
-//			preparedStatement.setString(1, peliculaFormulario.getNombrePelicula());
 			preparedStatement.executeUpdate();
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -316,65 +377,6 @@ public class FilmRepository {
 		}
 		manager.close(conn);
 		return ownerInDatabase;
-	}
-
-	public List<Actor> searchAllActores() {
-		List<Actor> listActores = new ArrayList<Actor>();
-		Connection conn = manager.open(jdbcUrl);
-		ResultSet resultSet = null;
-		PreparedStatement prepareStatement = null;
-		try {
-			prepareStatement = conn.prepareStatement("SELECT * FROM ACTOR");
-			resultSet = prepareStatement.executeQuery();
-			System.out.println("Entrando en el while de searchAllActores");
-			Actor actorInDatabase;
-			while (resultSet.next()) {
-				actorInDatabase = new Actor();
-				actorInDatabase.setCod(resultSet.getInt(1));
-				actorInDatabase.setName(resultSet.getString(2));
-				actorInDatabase.setYearOfTheBirthDate(resultSet.getInt(3));
-				System.out.println("Actor in Database " + actorInDatabase.toString() );
-				listActores.add(actorInDatabase);
-			}
-
-		} catch (SQLException e) {
-			e.printStackTrace();
-			throw new RuntimeException(e);
-		} finally {
-			close(resultSet);
-			close(prepareStatement);
-			manager.close(conn);
-		}
-		System.out.println("listActores.size(): " + listActores.size());
-		return listActores;
-	}
-
-	public List<Pelicula> searchAllPeliculas() {
-		List<Pelicula> listFilm = new ArrayList<Pelicula>();
-		Connection conn = manager.open(jdbcUrl);
-		ResultSet resultSet = null;
-		PreparedStatement prepareStatement = null;
-		try {
-			prepareStatement = conn.prepareStatement("SELECT * FROM PELICULA");
-			resultSet = prepareStatement.executeQuery();
-			while (resultSet.next()) {
-				Pelicula filmInDataBase = new Pelicula();
-
-//				petInDatabase.setNombrePelicula(resultSet.getString(1));
-
-				listFilm.add(filmInDataBase);
-			}
-
-		} catch (SQLException e) {
-			e.printStackTrace();
-			throw new RuntimeException(e);
-		} finally {
-			close(resultSet);
-			close(prepareStatement);
-			manager.close(conn);
-		}
-
-		return listFilm;
 	}
 
 	public List<Director> searchAllDirectores() {
