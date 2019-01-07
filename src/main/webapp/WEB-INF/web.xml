@@ -107,6 +107,11 @@
 		<servlet-class>es.salesianos.servlet.AddDirectorServlet</servlet-class>
 	</servlet>
 	
+	<servlet>
+		<servlet-name>searchActor</servlet-name>
+		<servlet-class>es.salesianos.servlet.SearchActor</servlet-class>
+	</servlet>
+	
 	<!-- Mapping -->
 	
 	<servlet-mapping>
@@ -139,6 +144,10 @@
 		<url-pattern>/addDirector</url-pattern>
 	</servlet-mapping>
 	
+	<servlet-mapping>
+		<servlet-name>searchActor</servlet-name>
+		<url-pattern>/searchYear</url-pattern>
+	</servlet-mapping>
 <!-- 
 	<servlet-mapping>
 		<servlet-name>addActorServlet</servlet-name>

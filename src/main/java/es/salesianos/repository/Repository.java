@@ -51,6 +51,37 @@ public class Repository {
 		return listActores;
 	}
 	
+	public List<Actor> searchActoresYear() {
+		List<Actor> listActores = new ArrayList<Actor>();
+		Connection conn = manager.open(jdbcUrl);
+		ResultSet resultSet = null;
+		PreparedStatement prepareStatement = null;
+		try {
+			prepareStatement = conn.prepareStatement("SELECT * FROM ACTOR WHERE YEAROFTHEBIRTH BETWEEN year1 AND year2");
+			resultSet = prepareStatement.executeQuery();
+			System.out.println("Entrando en el while de searchActoresYear");
+			Actor actorInDatabase;
+			while (resultSet.next()) {
+				actorInDatabase = new Actor();
+				actorInDatabase.setCod(resultSet.getInt(1));
+				actorInDatabase.setName(resultSet.getString(2));
+				actorInDatabase.setYearOfTheBirthDate(resultSet.getInt(3));
+				System.out.println("Actor in Database " + actorInDatabase.toString() );
+				listActores.add(actorInDatabase);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+			throw new RuntimeException(e);
+		} finally {
+			close(resultSet);
+			close(prepareStatement);
+			manager.close(conn);
+		}
+		System.out.println("listActores.size(): " + listActores.size());
+		return listActores;
+	}
+	
+	
 	public void insertActor(Actor actor) {
 		Connection conn = manager.open(jdbcUrl);
 		PreparedStatement preparedStatement = null;

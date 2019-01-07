@@ -64,6 +64,11 @@ public class ActorService {
 		LOGGER.info("listAllActores method...");
 		return repository.searchAllActores();
 	}
+	
+	public List<Actor> listYearActor() {
+		LOGGER.info("listYearActor method...");
+		return repository.searchActoresYear();
+	}
 
 	public List<Director> listAllDirectores() {
 		LOGGER.info("ESTAS EN EL ListService");

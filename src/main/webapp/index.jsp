@@ -23,6 +23,9 @@
 	<form action="loadFilmList" method="post">
 		<input type="submit" value="Show Films">
 	</form>
+	
+	<div><a href="searchYear.jsp">Search Year of Birth</a></div>
+	
 	<!-- 
 	<div>
 		<a href="film/addFilm.jsp">Show Films</a>
